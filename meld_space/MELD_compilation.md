@@ -42,7 +42,7 @@ Now we introduce the modules required for compilation for both OpenMM and MELD.
 module load ufrc gcc/12.2.0 cuda/12.2 gcc/9.3.0 cmake/3.26.4 doxygen/1.8.3.1 cuda/11.4.3 openmpi/4.1.5 swig/3.0.8  netcdf/4.2
 ```
 
-Download `OpenMM` from their repository by `git clone https://github.com/openmm/openmm OpenMM_cuda12` and `cd /home/program/OpenMM_cuda12`, the `openmm` folder should be downloaded inside.  Create a build folder with `mkdir build_cuda12; cd build_cuda12` and run the following cmd to build install files for OpenMM
+Download `OpenMM` from their repository by `cd OpenMM_cuda12; git clone https://github.com/openmm/openmm openmm` and `cd /home/program/OpenMM_cuda12`, the `openmm` folder should be downloaded inside.  Create a build folder with `mkdir build_cuda12; cd build_cuda12` and run the following cmd to build install files for OpenMM
 
 ```bash
 cmake -DCMAKE_INSTALL_PREFIX:PATH=/home/program/OpenMM_cuda12/bin_cuda12/ -DOPENMM_DIR:PATH=/home/program/OpenMM_cuda12/bin_cuda12/ -DOPENMM_CUDA_COMPILER:PATH=/apps/compilers/cuda/12.2.0/bin/nvcc -DCUDA_CUDA_LIBRARY=/apps/compilers/cuda/12.2.0/lib64/stubs/libcuda.so ../openmm/
